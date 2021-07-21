@@ -1,5 +1,4 @@
-# DistgLF
-# *<center>Disentangling light fields for super-resolution and disparity estimation</center>*
+# *<center>Disentangling Light Fields for Super-Resolution and Disparity Estimation</center>*
 
 ***<center><a href="https://yingqianwang.github.io" target="_blank">Yingqian Wang</a>&emsp; <a href="https://longguangwang.github.io/" target="_blank">Longguang Wang</a>&emsp;  <a href="https://gaochangwu.github.io/" target="_blank">Gaochang Wu</a>&emsp; Jungang Yang&emsp; Wei An&emsp; Jingyi Yu&emsp; <a href="http://yulanguo.me/" target="_blank">Yulan Guo</a></center>*** <br>
 
