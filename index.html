@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)file:///C:/Users/Winder/Desktop/LFreconstruction.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=7.0000" http-equiv="X-UA-Compatible">
+<title></title>
+
+<style type="text/css">
+.styleTittle {
+	FONT-SIZE: 45px; FONT-FAMILY: "Arial", Times, serif; 
+}
+.STYLEAuthor {
+	FONT-SIZE: 20px; FONT-FAMILY: "Arial", Times, serif
+}
+.styleAffiliation {
+	FONT-SIZE: 16px; FONT-FAMILY: "Arial", Times, serif
+}
+.STYLESection {
+	FONT-SIZE: 30px; FONT-FAMILY: "Arial", Times, serif; FONT-WEIGHT: bold
+}
+.styleAbstract {
+	FONT-SIZE: 20px; FONT-FAMILY: "Arial";
+}
+.STYLECaption {
+	FONT-SIZE: 16px; FONT-FAMILY: "Arial"
+}
+.STYLECitation {
+	FONT-SIZE: 17px; FONT-FAMILY: "Arial"
+}
+BODY {
+	BACKGROUND-IMAGE: none
+}
+HR {
+	BORDER-TOP: purple 1px solid; BORDER-RIGHT: purple 1px solid; BORDER-BOTTOM: purple 1px solid; BORDER-LEFT: purple 1px solid
+}
+SPAN.style231{
+	FONT-FAMILY: "Times New Roman","serif"; mso-style-name: style231; mso-style-unhide: no; mso-ansi-font-size: 12.0pt; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-family: "Times New Roman"
+}
+SPAN.style2311 {
+	FONT-FAMILY: "Times New Roman","serif"; mso-style-name: style231; mso-style-unhide: no; mso-ansi-font-size: 12.0pt; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-family: "Times New Roman"
+}
+SPAN.style23111 {
+	FONT-FAMILY: "Times New Roman","serif"; mso-style-name: style231; mso-style-unhide: no; mso-ansi-font-size: 12.0pt; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: "Times New Roman"; mso-hansi-font-family: "Times New Roman"; mso-bidi-font-family: "Times New Roman"
+}
+.style47 {
+	FONT-SIZE: 16pt; COLOR: #000000
+}
+.style55 {
+	FONT-SIZE: 16px; FONT-FAMILY: "Times New Roman", Times, serif; FONT-WEIGHT: bold
+}
+A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+BODY {	
+}
+
+#container {
+	WIDTH: 1024px; MARGIN: 0px auto;
+}
+
+</style>
+
+
+<meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></head>
+<body onLoad=" ">
+<div id="container" class="STYLE37">
+
+
+<p class="styleTittle" align="center">Disentangling Light Fields for Super-Resolution<br> and Disparity Estimation</p>
+<p align="center"><span class="STYLEAuthor"> 
+<a href="https://yingqianwang.github.io/" target="_blank">Yingqian Wang</a><sup>1</sup>, &nbsp;&nbsp;
+<a href="https://longguangwang.github.io/" target="_blank">Longguang Wang</a><sup>1</sup>, &nbsp;&nbsp;
+<a href="https://gaochangwu.github.io/" target="_blank">Gaochang Wu</a><sup>2</sup>, &nbsp;&nbsp;
+<a>Jungang Yang</a><sup>1</sup>,&nbsp;&nbsp; 
+<a>Wei An</a><sup>1</sup>,&nbsp;&nbsp; <br>
+<a href="https://www.eecis.udel.edu/~yu/" target="_blank">Jingyi Yu</a><sup>3</sup>, <span style="font-style: oblique">Fellow, IEEE</span>, &nbsp;&nbsp; 
+<a href="http://yulanguo.me/" target="_blank">Yulan Guo</a><sup>1,4</sup>, <span style="font-style: oblique">Senior Member, IEEE</span> &nbsp;&nbsp;
+</span> 
+</p>
+
+<p class="styleAffiliation" align="center">
+1. College of Electronic Science and Technology, National University of Defense Technology<br>
+2. State Key Laboratory of Synthetical Automation for Process Industries, Northeastern University<br>
+3. School of Information Science and Technology, ShanghaiTech University<br> 
+4. School of Electronics and Communication Engineering, Sun Yat-sen University<br> 
+<br>
+<!-- <p align="center" class="style23">*Corresponding authors</p>-->
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/demo.gif" width="80%"></th></tr></tbody></table>
+
+
+<p class="STYLESection" align="center">Abstract</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<p class="styleAbstract" align="justify">Light field (LF) cameras record both intensity and directions of light rays, and encode 3D cues into 4D LF images. Recently, many convolutional neural networks (CNNs) have been proposed for various LF image processing tasks. However, it is challenging for CNNs to effectively process LF images since the spatial and angular information are highly inter-twined with varying disparities. In this paper, we propose a generic mechanism to disentangle these coupled information for LF image processing. Specifically, we first design a class of domain-specific convolutions to disentangle LFs from different dimensions, and then leverage these disentangled features by designing task-specific modules. Our disentangling mechanism can well incorporate the LF structure prior and effectively handle 4D LF data. Based on the proposed mechanism, we develop three networks (i.e., DistgSSR, DistgASR and DistgDisp) for spatial super-resolution, angular super-resolution and disparity estimation. Experimental results show that our networks achieve state-of-the-art performance on all these three tasks, which demonstrates the effectiveness, efficiency, and generality of our disentangling mechanism.</p>
+<br><br>
+
+
+<p class="STYLESection" align="center">The LF Disentangling Mechanism</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/SAI-MacPI.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 1: An illustration of the relationship between SAI, EPI and MacPI representations of a 4D LF. To convert an SAI array into a MacPI, pixels at the same spatial locations of each SAI need to be organized according to their angular  coordinates to generate a macro-pixel. Then, the generated macro-pixels need to be organized according to their spatial coordinates.
+</p>
+<br><br>
+
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/FeatureExtractor.png" width="50%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 2: An illustration of the spatial, angular, and EPI feature extractors. Here, an LF of size U=V=3 (i.e., A=3), H=W=4 is used as a toy example. For better visualization of the MacPI, different macro-pixels are paint with different background colors while pixels from different views are denoted with different characters. The proposed feature extractors can disentangle LFs into different subspaces, i.e., an SFE convolves pixels in the same views, an AFE convolves pixels from the same macro-pixel, and an EFE convolves pixels on EPIs..</p>
+<br><br>
+
+
+
+<p class="STYLESection" align="center">DistgSSR: Disentangling Mechanism for Spatial SR</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/DistgSSR.png" width="85%"></th></tr></tbody></table>
+<p class="styleCaption" align="center">Fig. 3: An overview of our DistgSSR network.</p><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>    
+<p class="styleCaption" align="justify">Table 1: PSNR/SSIM values achieved by different methods for 2× and 4× SR. The best results are in <span style="color:red">red</span> and the second best results are in <span style="color:blue">blue</span>.</p>
+<th scope="col"><img src="./imgs/QuantitativeSSR.png" width="100%"></th></tr></tbody></table>
+<br><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/Visual-SSR.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 4: Visual comparisons for 2× and 4× SR. The super-resolved center view images and horizontal EPIs are shown. The PSNR and SSIM scores achieved by different methods on the presented scenes are reported below the zoom-in regions.</p><br><br>
+
+
+<table width="95%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col">
+      <video controls="controls" width="95%" src="https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgLF-SpatialSR.mp4"></video>     
+	</th>
+  </tr>
+  </tbody>
+</table>
+<br><br>
+
+
+<p class="STYLESection" align="center">DistgASR: Disentangling Mechanism for Angular SR</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/DistgASR.png" width="85%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 5: An overview of our DistgASR network. Here, we take the 2×2→7×7 angular SR as an example to illustrate the network structure</p><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>    
+<p class="styleCaption" align="justify">Table 2: PSNR values achieved by different methods for 2×2→7×7 angular SR. The best results are in <span style="color:red">red</span> and the second best results are in <span style="color:blue">blue</span>.</p>
+<th scope="col"><img src="./imgs/QuantitativeASR.png" width="55%"></th></tr></tbody></table>
+<br><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/Visual-ASR.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 6: Visual results achieved by different methods on scenes monasRoom (top) and IMG1555 (bottom) for 2×2→7×7 angular  SR. Here, we show the error maps of the reconstructed center view images, along with two zoom-in regions and horizontal/vertical EPIs.</p><br><br>
+
+
+<table width="95%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col">
+      <video controls="controls" width="95%" src="https://wyqdatabase.s3.us-west-1.amazonaws.com/DistgLF-AngularSR.mp4"></video>
+    </th>
+  </tr>
+  </tbody>
+  </table>
+<br><br>
+
+
+
+<p class="STYLESection" align="center">DistgDisp: Disentangling Mechanism for Disparity Estimation</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/DistgDisp.png" width="85%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 7: An overview of our DistgDisp. The input 9×9 SAIs are first re-organized into a MacPI and fed to 8 spatial residual blocks for spatial information incorporation. Then, a series of disparity-selective angular feature extractors are introduced to disentangle the disparity information from the MacPI features to generate cost volumes. The generated cost volumes are further aggregated via a 3D hourglass module to regress the final disparity.</p><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>    
+<p class="styleCaption" align="justify">Table 3: Comparative results achieved by different LF disparity estimation methods on the HCI benchmark. The best results are in <span style="color:red">red</span> and the second best results are in <span style="color:blue">blue</span>.</p>
+<th scope="col"><img src="./imgs/QuantitativeDisp.png" width="100%"></th></tr></tbody></table>
+<br><br>
+
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/Screenshot-Disp.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify"> Fig. 8: The screenshot of the rankings on the HCI 4D LF benchmark (captured in July 2021). Our DistgDisp ranks the second to the fourth place among all the 81 submissions in terms of the average values of five mainly used metrics, and ranks the first place in terms of the average running time.</p><br><br>
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/Visual-Disp.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 9: Visual comparisons among different LF disparity estimation methods on the HCI 4D LF benchmark. For each scene, the bottom row shows the estimated disparity maps and the top row shows the corresponding BadPix0.07 maps (pixels with absolute error larger than 0.07 are marked in red.</p><br><br>
+
+
+
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/Visual-DispReal.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify"> Fig. 10: Performance on real-world LFs and extended applications on depth-assisted refocusing.</p><br><br>
+
+
+<p class="STYLESection" align="center">Demo Video</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col">
+      <video controls="controls" width="100%" src="https://yingqianwang.github.io/DistgLF/videos/demo.mp4"></video>
+    </th>
+ </tr>
+  </tbody>
+</table>
+<br><br>
+
+
+<p class="STYLESection" align="center">Source Code</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<p class="STYLEAuthor">
+<a href="https://github.com/YingqianWang/DistgLF/tree/SSR">DistgSSR</a>, &nbsp;&nbsp;
+<a href="https://github.com/YingqianWang/DistgLF/tree/ASR">DistgASR</a>, &nbsp;&nbsp;
+<a href="https://github.com/YingqianWang/DistgLF/tree/Disp">DistgDisp</a>, &nbsp;&nbsp;
+ </p><br>
+
+<p class="STYLESection" align="center">Citation</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+<p class="STYLECitation">
+  @Article{DistgLF,<br>
+  author    = {Wang, Yingqian and Wang, Longguang and Wu, Gaochang and Yang, Jungang and An, Wei and Yu, Jingyi and Guo, Yulan},<br>
+  title     = {Disentangling Light Fields for Super-Resolution and Disparity Estimation},<br>
+  journal   = {arXiv},<br>
+  month     = {July},<br>
+  year      = {2021},<br>
+  }</p> 
+<br>
+
+<p class="STYLESection" align="center">Contact</p>
+<hr style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+
+<p class="STYLEAuthor">
+Any question regarding this work can be addressed to 
+<a href="wangyingqian16@nudt.edu.cn">wangyingqian16@nudt.edu.cn</a>.
+ </p
+ <br><br><br><br><br><br>
+
+</pre></div>
+</body></html>
