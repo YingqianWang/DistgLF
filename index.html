@@ -107,7 +107,7 @@ BODY {
 <table width="100%" border="0">
   <tbody>
   <tr>
-    <th scope="col"><img src="./imgs/SAI-MacPI.png" width="100%"></th></tr></tbody></table>
+    <th scope="col"><img src="./imgs/SAI-MacPI.png" width="98%"></th></tr></tbody></table>
 <p class="styleCaption" align="justify">Fig. 1: An illustration of the relationship between SAI, EPI and MacPI representations of a 4D LF. To convert an SAI array into a MacPI, pixels at the same spatial locations of each SAI need to be organized according to their angular  coordinates to generate a macro-pixel. Then, the generated macro-pixels need to be organized according to their spatial coordinates.
 </p>
 <br><br>
@@ -117,7 +117,11 @@ BODY {
   <tbody>
   <tr>
     <th scope="col"><img src="./imgs/FeatureExtractor.png" width="50%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify">Fig. 2: An illustration of the spatial, angular, and EPI feature extractors. Here, an LF of size U=V=3 (i.e., A=3), H=W=4 is used as a toy example. For better visualization of the MacPI, different macro-pixels are paint with different background colors while pixels from different views are denoted with different characters. The proposed feature extractors can disentangle LFs into different subspaces, i.e., an SFE convolves pixels in the same views, an AFE convolves pixels from the same macro-pixel, and an EFE convolves pixels on EPIs..</p>
+<p class="styleCaption" align="justify">Fig. 2: An illustration of the spatial, angular, and EPI feature extractors. 
+	Here, an LF of size U=V=3 (i.e., A=3), H=W=4 is used as a toy example. For better visualization of the MacPI, 
+	different macro-pixels are paint with different background colors while pixels from different views are denoted with different characters. 
+	The proposed feature extractors can disentangle LFs into different subspaces, i.e., an SFE convolves pixels in the same views, 
+	an AFE convolves pixels from the same macro-pixel, and an EFE convolves pixels on EPIs..</p>
 <br><br>
 
 
@@ -128,21 +132,41 @@ BODY {
 <table width="100%" border="0">
   <tbody>
   <tr>
-    <th scope="col"><img src="./imgs/DistgSSR.png" width="85%"></th></tr></tbody></table>
+    <th scope="col"><img src="./imgs/DistgSSR.png" width="95%"></th></tr></tbody></table>
 <p class="styleCaption" align="center">Fig. 3: An overview of our DistgSSR network.</p><br>
 
 <table width="100%" border="0">
   <tbody>
   <tr>    
-<p class="styleCaption" align="justify">Table 1: PSNR/SSIM values achieved by different methods for 2× and 4× SR. The best results are in <span style="color:red">red</span> and the second best results are in <span style="color:blue">blue</span>.</p>
+<p class="styleCaption" align="justify">Table 1: PSNR/SSIM values achieved by different methods for 2× and 4× SR. The best results are in <b>bold faces</b>.</p>
 <th scope="col"><img src="./imgs/QuantitativeSSR.png" width="100%"></th></tr></tbody></table>
 <br><br>
 
+	
 <table width="100%" border="0">
   <tbody>
   <tr>
     <th scope="col"><img src="./imgs/Visual-SSR.png" width="100%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify">Fig. 4: Visual comparisons for 2× and 4× SR. The super-resolved center view images and horizontal EPIs are shown. The PSNR and SSIM scores achieved by different methods on the presented scenes are reported below the zoom-in regions.</p><br><br>
+<p class="styleCaption" align="justify">Fig. 4: Visual comparisons for 4×SR. The super-resolved center view images and horizontal EPIs are shown. 
+	The PSNR and SSIM scores achieved by different methods on the presented scenes are reported below the zoom-in regions.</p><br><br>
+
+<table width="100%" border="0">
+ <tbody>
+ <tr>
+ <th scope="col"><img src="./imgs/Efficiency-SSR.png" width="60%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Table 2: Comparisons of the number of parameters (#Param.) and FLOPs for 2× and 4×SR. 
+	Note that, FLOPs is calculated on an input LF with an angular resolution of 5×5 and a spatial resolution of 32×32. 
+	The PSNR scores are averaged over 5 test datasets.</p><br><br>
+
+
+	
+<table width="100%" border="0">
+ <tbody>
+ <tr>
+ <th scope="col"><img src="./imgs/SSRtoDepth.png" width="100%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 5: Depth estimation results achieved by SPO using 4×SR LF images produced by different SR methods.
+	The mean square error multiplied with 100 (i.e., MSE×100) was used as the quantitative metric. 
+	Note that, the accuracy is improved by using the LF images produced by our DistgSSR.</p><br><br>
 
 
 <table width="95%" border="0">
@@ -163,13 +187,14 @@ BODY {
 <table width="100%" border="0">
   <tbody>
   <tr>
-    <th scope="col"><img src="./imgs/DistgASR.png" width="85%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify">Fig. 5: An overview of our DistgASR network. Here, we take the 2×2→7×7 angular SR as an example to illustrate the network structure</p><br>
+    <th scope="col"><img src="./imgs/DistgASR.png" width="95%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 6: An overview of our DistgASR network. 
+	Here, we take the 2×2→7×7 angular SR as an example to illustrate the network structure</p><br>
 
 <table width="100%" border="0">
   <tbody>
   <tr>    
-<p class="styleCaption" align="justify">Table 2: PSNR values achieved by different methods for 2×2→7×7 angular SR. The best results are in <span style="color:red">red</span> and the second best results are in <span style="color:blue">blue</span>.</p>
+<p class="styleCaption" align="justify">Table 3: PSNR values achieved by different methods for 2×2→7×7 angular SR. The best results are in <b>bold faces</b>.</p>
 <th scope="col"><img src="./imgs/QuantitativeASR.png" width="55%"></th></tr></tbody></table>
 <br><br>
 
@@ -177,9 +202,19 @@ BODY {
   <tbody>
   <tr>
     <th scope="col"><img src="./imgs/Visual-ASR.png" width="100%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify">Fig. 6: Visual results achieved by different methods on scenes monasRoom (top) and IMG1555 (bottom) for 2×2→7×7 angular  SR. Here, we show the error maps of the reconstructed center view images, along with two zoom-in regions and horizontal/vertical EPIs.</p><br><br>
+<p class="styleCaption" align="justify">Fig. 6: Visual results achieved by different methods on scenes monasRoom (top) and IMG1555 (bottom) for 2×2→7×7 angular SR.
+	Here, we show the error maps of the reconstructed center view images, along with two zoom-in regions and horizontal/vertical EPIs.</p><br><br>
 
 
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <th scope="col"><img src="./imgs/ASRtoDepth.png" width="60%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 7: Disparity estimation results achieved by SPO using LF images produced by different angular SR methods.
+	The mean square error multiplied with 100 (i.e., MSE×100) was used as the quantitative metric. 
+	The accuracy is improved by using the LF images produced by our DistgASR.</p><br><br>
+	
+	
 <table width="95%" border="0">
   <tbody>
   <tr>
@@ -199,13 +234,13 @@ BODY {
 <table width="100%" border="0">
   <tbody>
   <tr>
-    <th scope="col"><img src="./imgs/DistgDisp.png" width="85%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify">Fig. 7: An overview of our DistgDisp. The input 9×9 SAIs are first re-organized into a MacPI and fed to 8 spatial residual blocks for spatial information incorporation. Then, a series of disparity-selective angular feature extractors are introduced to disentangle the disparity information from the MacPI features to generate cost volumes. The generated cost volumes are further aggregated via a 3D hourglass module to regress the final disparity.</p><br>
+    <th scope="col"><img src="./imgs/DistgDisp.png" width="95%"></th></tr></tbody></table>
+<p class="styleCaption" align="justify">Fig. 8: An overview of our DistgDisp. The input 9×9 SAIs are first re-organized into a MacPI and fed to 8 spatial residual blocks for spatial information incorporation. Then, a series of disparity-selective angular feature extractors are introduced to disentangle the disparity information from the MacPI features to generate cost volumes. The generated cost volumes are further aggregated via a 3D hourglass module to regress the final disparity.</p><br>
 
 <table width="100%" border="0">
   <tbody>
   <tr>    
-<p class="styleCaption" align="justify">Table 3: Comparative results achieved by different LF disparity estimation methods on the HCI benchmark. The best results are in <span style="color:red">red</span> and the second best results are in <span style="color:blue">blue</span>.</p>
+<p class="styleCaption" align="justify">Table 4: Comparative results achieved by different LF disparity estimation methods on the HCI benchmark. The best results are in <b>bold faces</b>.</p>
 <th scope="col"><img src="./imgs/QuantitativeDisp.png" width="100%"></th></tr></tbody></table>
 <br><br>
 
@@ -214,13 +249,13 @@ BODY {
   <tbody>
   <tr>
     <th scope="col"><img src="./imgs/Screenshot-Disp.png" width="100%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify"> Fig. 8: The screenshot of the rankings on the HCI 4D LF benchmark (captured in July 2021). Our DistgDisp ranks the second to the fourth place among all the 81 submissions in terms of the average values of five mainly used metrics, and ranks the first place in terms of the average running time.</p><br><br>
+<p class="styleCaption" align="justify"> Fig. 9: The screenshot of the rankings on the HCI 4D LF benchmark (captured in July 2021). Our DistgDisp ranks the second to the fourth place among all the 81 submissions in terms of the average values of five mainly used metrics, and ranks the first place in terms of the average running time.</p><br><br>
 
 <table width="100%" border="0">
   <tbody>
   <tr>
     <th scope="col"><img src="./imgs/Visual-Disp.png" width="100%"></th></tr></tbody></table>
-<p class="styleCaption" align="justify">Fig. 9: Visual comparisons among different LF disparity estimation methods on the HCI 4D LF benchmark. For each scene, the bottom row shows the estimated disparity maps and the top row shows the corresponding BadPix0.07 maps (pixels with absolute error larger than 0.07 are marked in red.</p><br><br>
+<p class="styleCaption" align="justify">Fig. 10: Visual comparisons among different LF disparity estimation methods on the HCI 4D LF benchmark. For each scene, the bottom row shows the estimated disparity maps and the top row shows the corresponding BadPix0.07 maps (pixels with absolute error larger than 0.07 are marked in red.</p><br><br>
 
 
 
@@ -266,7 +301,7 @@ BODY {
   @Article{DistgLF,<br>
   author    = {Wang, Yingqian and Wang, Longguang and Wu, Gaochang and Yang, Jungang and An, Wei and Yu, Jingyi and Guo, Yulan},<br>
   title     = {Disentangling Light Fields for Super-Resolution and Disparity Estimation},<br>
-  journal   = {IEEE T-PAMI (major revision)},<br>  
+  journal   = {IEEE T-PAMI (under review)},<br>  
   year      = {2021},<br>
   }</p> 
 <br>
